@@ -51,6 +51,8 @@ table {
     --universal-box-shadow: 0 3px 5px 2px rgb(4, 47, 46, 0.5);
     --input-box-shadow: 1px 2px 2px 2px rgb(4, 47, 46, 0.5);
     --input-bg-color: #1a553736;
+    --button-active-bg-color: #0f766e;
+    --button-active-font-color: #f0fdf4;
 }
 
 html {
@@ -91,6 +93,9 @@ body {
     grid-row: 2 / 3;
     margin-top: 30px;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .form-container {
@@ -153,12 +158,88 @@ input:focus {
 }
 
 .submit, .reset {
+    border: none;
     flex: 1 1 0;
     background-color: var(--header-bg-color);
     color: var(--header-font-color);
     font-size: 1.2rem;
+    font-weight: bold;
     padding: 10px 10px;
     border-radius: 0.5em;
+}
+
+.submit:hover, .reset:hover {
+    background-color: var(--input-bg-color);
+    color: var(--header-bg-color);
+}
+
+.submit:active, .reset:active {
+    background-color: var(--button-active-bg-color);
+    color: var(--button-active-font-color);
+}
+
+.book {
+    background-color: #fff;
+    width: 150px;
+    flex: 1 1 auto;
+    box-shadow: var(--universal-box-shadow);
+    border-radius: 20px;
+    height: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+
+.book:hover::after {
+    content: url('./icons/close-circle.svg');
+    width: 20px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.title {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.author {
+    font-size: 0.8rem;
+    text-align: right;
+
+}
+
+.pages {
+    font-size: 1.2rem;
+    margin-top: 30px;
+    text-align: center;
+    font-style: italic;
+    font-weight: lighter;
+    margin-top: auto;
+}
+
+.read-button {
+    margin-top: 10px;
+    background-color: var(--header-bg-color);
+    color: var(--header-font-color);
+    border-radius: 0.5rem;
+    padding: 10px;
+    font-size: 1.5rem;
+    border: none;
+}
+
+.read-button:hover {
+    background-color: var(--input-bg-color);
+    color: var(--header-bg-color);
+}
+
+.read-button:active {
+    background-color: var(--button-active-bg-color);
+    color: var(--button-active-font-color);
 }
 
 * {
