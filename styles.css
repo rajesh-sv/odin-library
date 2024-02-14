@@ -44,6 +44,15 @@ table {
 	border-spacing: 0;
 }
 
+:root {
+    --header-bg-color: #134e4a;
+    --header-font-color: #f0fdf4;
+    --body-bg-color: #f0fdf4;
+    --universal-box-shadow: 0 3px 5px 2px rgb(4, 47, 46, 0.5);
+    --input-box-shadow: 1px 2px 2px 2px rgb(4, 47, 46, 0.5);
+    --input-bg-color: #1a553736;
+}
+
 html {
   box-sizing: border-box;
   min-width: min-content;
@@ -58,10 +67,11 @@ html {
 body {
     font-family: Roboto, system-ui, sans-serif;
     max-width: 2000px;
-    min-width: 600px;
+    min-width: 750px;
     margin: 0 auto;
+    background-color: var(--body-bg-color);
     display: grid;
-    grid-template-columns: 1fr 250px;
+    grid-template-columns: 1fr 300px;
     grid-template-rows: 75px 1fr;
 }
 
@@ -70,20 +80,85 @@ body {
     grid-row: 1 / 2;
     display: flex;
     align-items: center;
+    padding-left: 20px;
+    background-color: var(--header-bg-color);
+    color: var(--header-font-color);
+    box-shadow: var(--universal-box-shadow);
 }
 
 .books {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    margin-top: 30px;
+    padding: 20px;
 }
 
 .form-container {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    margin-top: 30px;
+    padding: 20px;
 }
 
-img {
+.library-icon {
     width: 50px;
+    filter: invert(92%) sepia(19%) saturate(460%) hue-rotate(62deg) brightness(121%) contrast(98%);
+}
+
+h1 {
+    padding-left: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    border: none;
+}
+
+input[type="text"], input[type="tel"] {
+    margin-bottom: 15px;
+    padding: 3px 5px;
+    border-radius: 0.3em;
+    background-color: var(--input-bg-color);
+}
+
+input:focus {
+    box-shadow: var(--input-box-shadow);
+}
+
+.read-checkbox, .button-container, #bood-read {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    gap: 5px;
+}
+
+.read-checkbox > label {
+    margin: 0;
+}
+
+.button-container {
+    align-items: stretch;
+}
+
+.submit, .reset {
+    flex: 1 1 0;
+    background-color: var(--header-bg-color);
+    color: var(--header-font-color);
+    font-size: 1.2rem;
+    padding: 10px 10px;
+    border-radius: 0.5em;
 }
 
 * {
