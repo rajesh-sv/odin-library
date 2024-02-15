@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">
-        <img src="./icons/library.svg" alt="Library icon" class="library-icon">
-        <h1>Personal Library</h1>
+      <img src="./icons/library.svg" alt="Library icon" class="library-icon" />
+      <h1>Personal Library</h1>
     </div>
     <div class="books"></div>
     <div class="form-container">
-        <form action="#" method="post">
-            <p>
-                <label for="title">Title</label>
-                <input type="text" id="title">
-            </p>
-            <p>
-                <label for="author">Author</label>
-                <input type="text" id="author">
-            </p>
-            <p>
-                <label for="total-pages">Total Pages</label>
-                <input type="tel" id="total-pages">
-            </p>
-            <p>
-                <label for="pages-read">Pages Read</label>
-                <input type="tel" id="pages-read">
-            </p><div class="read-checkbox">
-            <label for="book-read">Read</label>
-            <input type="checkbox" id="book-read">
-            </div><div class="button-container"><button type="button" class="submit">Add Book</button>
-            <button type="reset" class="reset">Reset</button></div>
-        </form>
+      <form action="#" method="post">
+        <p>
+          <label for="title">Title</label>
+          <input type="text" id="title" required />
+        </p>
+        <p>
+          <label for="author">Author</label>
+          <input type="text" id="author" required />
+        </p>
+        <p>
+          <label for="total-pages">Total Pages</label>
+          <input type="tel" id="total-pages" required />
+        </p>
+        <p>
+          <label for="pages-read">Pages Read</label>
+          <input type="tel" id="pages-read" />
+        </p>
+        <div class="read-checkbox">
+          <label for="book-read">Read</label>
+          <input type="checkbox" id="book-read" />
+        </div>
+        <div class="button-container">
+          <button type="button" class="submit">Add Book</button>
+          <button type="reset" class="reset">Reset</button>
+        </div>
+      </form>
     </div>
-</body>
+  </body>
 </html>
